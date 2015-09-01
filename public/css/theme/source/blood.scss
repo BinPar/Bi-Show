@@ -11,8 +11,8 @@
  */
 
  // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import "../../public/css/theme/lib/mixins";
+@import "../../public/css/theme/lib/settings";
 // ---------------------------------------------
 
 // Include theme-specific fonts
@@ -49,7 +49,7 @@ $selectionColor: #fff;
 
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import "../../public/css/theme/lib/theme";
 // ---------------------------------------------
 
 // some overrides after theme template import
