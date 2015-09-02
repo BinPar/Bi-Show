@@ -1,3 +1,4 @@
 {
-  "app": "."
+  "app": ".",
+  "deployCheckWaitTime": 0
 }
