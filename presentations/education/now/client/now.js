@@ -14,4 +14,5 @@ Template.now.rendered = function () {
       { src: '/plugin/notes/notes.js', async: true }
     ]
   });
+  Meta.setTitle('Bi-Now');
 };
