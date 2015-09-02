@@ -23,12 +23,12 @@ html * {
 
 // Solarized colors
 $base03:    #000000;
-$base02:    #073642;
-$base01:    #646464;
+$base02:    #646464;
+$base01:    #586e75;
 $base00:    #657b83;
 $base0:     #839496;
 
-$base2:     red;
+$base2:     #000;
 $base3:     lighten($base2, 10%);
 $base1:     lighten($base2, 20%);
 $yellow:    #b58900;
@@ -41,7 +41,7 @@ $cyan:      #2aa198;
 $green:     #859900;
 
 // Override theme settings (see ../template/settings.scss)
-$mainColor: $base1;
+$mainColor: $base02;
 $headingColor: $base2;
 $headingTextShadow: none;
 

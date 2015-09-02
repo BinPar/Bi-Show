@@ -31,14 +31,30 @@ body {
  * HEADERS
  *********************************************/
 
-.reveal h1,
+.reveal h1 {
+	text-shadow: $heading1TextShadow;
+
+	margin: $headingMargin;
+	color: $headingColor;
+
+	font-family: $headingFont;
+	font-weight: $headingFontWeight;
+	line-height: $headingLineHeight;
+	letter-spacing: $headingLetterSpacing;
+
+	text-transform: $headingTextTransform;
+	text-shadow: $headingTextShadow;
+
+	word-wrap: break-word;
+}
+
 .reveal h2,
 .reveal h3,
 .reveal h4,
 .reveal h5,
 .reveal h6 {
 	margin: $headingMargin;
-	color: $headingColor;
+	color: $mainColor;
 
 	font-family: $headingFont;
 	font-weight: $headingFontWeight;
@@ -56,9 +72,11 @@ body {
 .reveal h3 {font-size: $heading3Size; }
 .reveal h4 {font-size: $heading4Size; }
 
-.reveal h1 {
-	text-shadow: $heading1TextShadow;
-}
+
+
+
+
+
 
 
 /*********************************************
