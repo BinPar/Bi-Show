@@ -20,7 +20,7 @@ $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingTextShadow: none;
-$headingFontWeight: normal;
+$headingFontWeight: 700;
 $heading1TextShadow: $headingTextShadow;
 
 $heading1Size: 3.00em;
@@ -29,18 +29,17 @@ $heading3Size: 1.55em;
 $heading4Size: 1.00em;
 
 
-
-
 // Links and actions
 $linkColor: #13DAEC;
 $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
-$selectionBackgroundColor: #FF5E99;
+$selectionBackgroundColor: #ffd620;
 $selectionColor: #fff;
 
 // Generates the presentation background, can be overridden
 // to return a background image or gradient
+
 @mixin bodyBackground() {
 	background: $backgroundColor;
 	background-image: url(http://www.binpar.com/Content/img/jpg/backgrounds/whiteground.jpg);

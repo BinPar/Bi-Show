@@ -31,7 +31,7 @@ $base0:     #839496;
 $base2:     #000;
 $base3:     lighten($base2, 10%);
 $base1:     lighten($base2, 20%);
-$yellow:    #b58900;
+$yellow:    #ffd620;
 $orange:    #cb4b16;
 $red:       #dc322f;
 $magenta:   #d33682;
@@ -46,9 +46,12 @@ $headingColor: $base2;
 $headingTextShadow: none;
 
 $backgroundColor: $base03;
-$linkColor: $blue;
+$linkColor: $yellow;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: $magenta;
+$selectionBackgroundColor: $yellow;
+
+$headingFontWeight02: 100;
+
 
 
 // Theme template ------------------------------

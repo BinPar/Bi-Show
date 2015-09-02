@@ -6,6 +6,21 @@
 
 body {
 	@include bodyBackground();
+
+}
+.reveal {
+	background-image: url(http://www.binpar.com/Content/img/jpg/backgrounds/yellowcosture-footer.jpg)  ;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}	
+
+.banda {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 44px;
+	width: 100%;
+	background-color: #000;
 }
 
 .reveal {
@@ -57,7 +72,7 @@ body {
 	color: $mainColor;
 
 	font-family: $headingFont;
-	font-weight: $headingFontWeight;
+	font-weight: $headingFontWeight02;
 	line-height: $headingLineHeight;
 	letter-spacing: $headingLetterSpacing;
 
@@ -73,15 +88,11 @@ body {
 .reveal h4 {font-size: $heading4Size; }
 
 
-
-
-
-
-
-
 /*********************************************
  * OTHER
  *********************************************/
+
+
 
 .reveal p {
 	margin: $blockMargin 0;
