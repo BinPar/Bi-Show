@@ -10,10 +10,8 @@
 // ---------------------------------------------
 
 
-
 // Include theme-specific fonts
-@import url(/lib/font/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,900,900italic,700italic);
 
 /**
  * Solarized colors by Ethan Schoonover
@@ -26,11 +24,11 @@ html * {
 // Solarized colors
 $base03:    #000000;
 $base02:    #073642;
-$base01:    #586e75;
+$base01:    #646464;
 $base00:    #657b83;
 $base0:     #839496;
 
-$base2:     #ffd620;
+$base2:     red;
 $base3:     lighten($base2, 10%);
 $base1:     lighten($base2, 20%);
 $yellow:    #b58900;
@@ -54,5 +52,5 @@ $selectionBackgroundColor: $magenta;
 
 
 // Theme template ------------------------------
-@import "../../public/css/theme/lib/theme";
+@import "../../public/css/theme/lib/binpar-theme";
 // ---------------------------------------------

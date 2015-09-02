@@ -5,7 +5,7 @@
 $backgroundColor: #2b2b2b;
 
 // Primary/body text
-$mainFont: 'Lato', sans-serif;
+$mainFont: 'Source Sans Pro', sans-serif;
 $mainFontSize: 36px;
 $mainColor: #eee;
 
@@ -14,7 +14,7 @@ $blockMargin: 20px;
 
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
-$headingFont: 'League Gothic', Impact, sans-serif;
+$headingFont: 'Source Sans Pro', sans-serif;
 $headingColor: #eee;
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
@@ -23,10 +23,13 @@ $headingTextShadow: none;
 $headingFontWeight: normal;
 $heading1TextShadow: $headingTextShadow;
 
-$heading1Size: 3.77em;
+$heading1Size: 3.00em;
 $heading2Size: 2.11em;
 $heading3Size: 1.55em;
 $heading4Size: 1.00em;
+
+
+
 
 // Links and actions
 $linkColor: #13DAEC;
@@ -40,4 +43,5 @@ $selectionColor: #fff;
 // to return a background image or gradient
 @mixin bodyBackground() {
 	background: $backgroundColor;
+	background-image: url(http://www.binpar.com/Content/img/jpg/backgrounds/whiteground.jpg);
 }
