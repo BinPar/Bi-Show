@@ -39,9 +39,24 @@ body {
 	left: 0;
 	height: 48px;
 	width: 100%;
-	background-color: #000;
+	background-color: #252627;
 	text-align: center;
 	z-index: 1;
+}
+
+.shadow {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(232,232,232,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(232,232,232,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(232,232,232,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(232,232,232,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(232,232,232,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(232,232,232,1) 100%);
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
 }
 
 .reveal .banda img {
@@ -50,7 +65,6 @@ body {
 	border: 1px solid #ccc;
 	margin-top: -90px;
 } 
-
 
 .reveal .controls {
 	right: 5px;
@@ -68,6 +82,7 @@ body {
 .reveal small .reveal strong {
     line-height: 32px;
 }
+
 
 /*********************************************
  * HEADERS
@@ -88,6 +103,7 @@ body {
 	text-shadow: $headingTextShadow;
 
 	word-wrap: break-word;
+	text-shadow: 0 2px #fff;
 }
 
 .reveal h2,
@@ -124,6 +140,7 @@ body {
 .reveal p {
 	margin: $blockMargin 0;
 	line-height: 1.3;
+	text-shadow: 0 2px #fff;
 }
 
 /* Ensure certain elements are never larger than the slide itself */
@@ -273,9 +290,10 @@ body {
 
 .reveal small {
 	display: inline-block;
-	font-size: 0.6em;
+	font-size: 0.4em;
 	line-height: 1.2em;
 	vertical-align: top;
+	font-weight: 300;
 }
 
 .reveal small * {
