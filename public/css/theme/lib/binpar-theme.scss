@@ -56,10 +56,12 @@ body {
 	right: 5px;
 	bottom: 45px;
 }
-
-
-strong {
-	background-color: red;
+.reveal b,
+.reveal strong {
+    border-bottom: .15em solid #FFD620;
+    display: inline;
+    height: 24px;
+    font-weight: inherit;
 }
 
 /*********************************************
@@ -125,10 +127,6 @@ strong {
 .reveal iframe {
 	max-width: 95%;
 	max-height: 95%;
-}
-.reveal strong,
-.reveal b {
-	font-weight: bold;
 }
 
 .reveal em {
