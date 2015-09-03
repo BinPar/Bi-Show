@@ -8,8 +8,16 @@ body {
 	@include bodyBackground();
 
 }
+.reveal .slide-background.oscuro {
+	background: url(http://www.binpar.com/Content/img/jpg/backgrounds/yellowcosture-footer.jpg) repeat-x bottom center #000 !important;
+}
+
+.has-dark-background .oscuro h2 {
+	color: $yellow;
+}
+
 .reveal {
-	background-image: url(http://www.binpar.com/Content/img/jpg/backgrounds/yellowcosture-footer.jpg)  ;
+	background-image: url(http://www.binpar.com/Content/img/jpg/backgrounds/yellowcosture-footer.jpg);
 	background-repeat: repeat-x;
 	background-position: left bottom;
 }	
@@ -55,8 +63,10 @@ body {
 } 
 
 .reveal .controls {
-	right: 5px;
-	bottom: 45px;
+	right: 20px;
+	bottom: -152px;
+	background-color: #000;
+	padding-bottom: 200px;
 }
 .reveal b,
 .reveal strong {
@@ -72,13 +82,12 @@ body {
 }
 
 .reveal .slides > section {
-	padding-top: 64px;
-}
 
+}
 
 .reveal .banda img.logoBlanco {
 	background-color: #000;
-	border-color: #fff;
+	border-color: #525456;
 }
 
 .reveal .banda img.logoColor {
@@ -86,6 +95,8 @@ body {
 	border-color: #E6E6E6;
 	display: none;
 }
+
+
 
 
 
