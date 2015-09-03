@@ -46,10 +46,12 @@ body {
 
 
 .reveal .banda img {
-	padding: 110px 20px 15px 20px;
-	background-color: #fff;
-	border: 1px solid #E6E6E6;
+	padding: 170px 20px 15px 20px;
 	margin-top: -90px;
+	border-style: solid;
+	border-width: 1px;
+	position: absolute;
+	left: 20px;
 } 
 
 .reveal .controls {
@@ -73,8 +75,16 @@ body {
 	padding-top: 64px;
 }
 
-.reveal .slides > section {
-	
+
+.reveal .banda img.logoBlanco {
+	background-color: #000;
+	border-color: #fff;
+}
+
+.reveal .banda img.logoColor {
+	background-color: #fff;
+	border-color: #E6E6E6;
+	display: none;
 }
 
 
