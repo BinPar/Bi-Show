@@ -7,8 +7,93 @@
       <p><small>V1.0 Sep. 2015</small></p>
     </section>
     <section>
-      <h2>History of the changes in the team's production paradigm</h2>
-      <p>A glimpse into <strong>the future</strong> of<br/>architecting digital experiences<br/>in the <strong>BinPar</strong> team</p><br/>
+      <section>
+      <h2>A brief history of our r-evolution</h2>
+      <table style="font-size:20px;">
+        <thead>
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Server Tech</th>
+            <th>Server Lang</th>
+            <th>Client Tech</th>
+            <th>Client Lang</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="fragment">
+            <td>1980</td>
+            <td>1994</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Z80 / X86</td>
+            <td>ASM / Pascal / C++</td>
+          </tr>
+          <tr class="fragment">
+            <td>1992</td>
+            <td>1998</td>
+            <td>Oracle/SQL Server</td>
+            <td>SQL</td>
+            <td>Visual Basic</td>
+            <td>Basic</td>
+          </tr>
+          <tr class="fragment">
+            <td>1994</td>
+            <td>2000</td>
+            <td>ASP / PHP</td>
+            <td>Visual Basic / PHP</td>
+            <td>DHTML</td>
+            <td>Javascript</td>
+          </tr>
+          <tr class="fragment">
+            <td>2002</td>
+            <td>2012</td>
+            <td>IIS WS / Sockets</td>
+            <td>c# <em>isomorphic!</em></td>
+            <td>SmartClient</td>
+            <td>c# <em>isomorphic!</em></td>
+          </tr>
+          <tr class="fragment">
+            <td>2002</td>
+            <td>2014</td>
+            <td>IIS ASPX</td>
+            <td>c#</td>
+            <td>HTML4/HTML5</td>
+            <td>Javascript</td>
+          </tr>
+          <tr class="fragment">
+            <td>2010</td>
+            <td>2018</td>
+            <td>IIS MVC</td>
+            <td>c#</td>
+            <td>HTML4/HTML5</td>
+            <td>Javascript</td>
+          </tr>
+          <tr class="fragment">
+            <td>2014</td>
+            <td>2018</td>
+            <td>IIS MVC API JSON</td>
+            <td>c#</td>
+            <td>HTML5 MVC FW</td>
+            <td>Javascript</td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
+      <section>
+          <h2>What is next?</h2>
+          <img src="/images/RobotEvolution.jpg" />
+      </section>
+    </section>
+    <section>
+      <h2>Where is going to be the next revolution coming from?</h2>
+      <img src="/images/js.png" style="height:400px;" class="fragment"/>
+    </section>
+    <section>
+      <section>
+        <h2>Are you f*k*ng joking?</h2>
+        <img src="/images/hope.jpg" class="fragment" />
+      </section>
     </section>
     <section class="oscuro" data-background="#000">
       <h2>Who is this Geoff Schmidt?</h2>
@@ -26,6 +111,163 @@
     <section class="oscuro" data-background="#000">
       <h2>Just 4 fun :)</h2>
       <iframe class="video" width="600" height="450" src="https://www.youtube.com/embed/20BySC_6HyY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section>
+      <section>
+        <h2>Strengths and weaknesses of Javascript</h2>
+        <img src="/images/strengths.jpg" style="height:300px;" />
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Lack of strong typing
+        </u3>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Lack of "from scratch" object model (prototype)
+        </u3>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Confusion about equality
+        </u3>
+        <pre><code data-trim contenteditable>
+console.log(false == '0');
+console.log(null == undefined);
+console.log(" \t\r\n" == 0);
+console.log('' == 0);
+        </code></pre>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Unclear var context scope
+        </u3>
+        <pre><code data-trim contenteditable>
+for (var i = 0; i &lt; a.length; i++) {
+  a[i].onclick = function() { a[i].toggle() };
+}
+        </code></pre>
+        <pre  class="fragment"><code data-trim contenteditable>
+for (var i = 0; i &lt; a.length; i++) {
+  var x = a[i];
+  x.onclick = function() { x.toggle() };
+}
+        </code></pre>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          And he is the most hardcore JS profile that we have!
+        </u3>
+        <p>It is really hard to go from dummy coding to hardcore Javascript</p>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Unclear object context scope
+        </u3>
+        <pre><code data-trim contenteditable>
+Game.prototype.restart = function () {
+  this.clearLocalStorage();
+  this.timer = setTimeout(function() {
+    this.clearBoard();
+  }, 0);
+};
+        </code></pre>
+        <pre  class="fragment"><code data-trim contenteditable>
+Game.prototype.restart = function () {
+  this.clearLocalStorage();
+  var self = this;   // save reference to 'this', while it's still this!
+  this.timer = setTimeout(function(){
+    self.clearBoard();    // oh OK, I do know who 'self' is!
+  }, 0);
+};
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Hard to see memory leaks
+        </u3>
+        <pre><code data-trim contenteditable>
+var theThing = null;
+var replaceThing = function () {
+  var priorThing = theThing;  // hold on to the prior thing
+  var unused = function () {
+    // 'unused' is the only place where 'priorThing' is referenced,
+    // but 'unused' never gets invoked
+    if (priorThing) {
+      console.log("hi");
+    }
+  };
+  theThing = {
+    longStr: new Array(1000000).join('*'),  // create a 1MB object
+    someMethod: function () {
+      console.log(someMessage);
+    }
+  };
+};
+setInterval(replaceThing, 1000);    // invoke `replaceThing' once every second
+        </code></pre>
+        <p>And this one is hard to <a href="http://www.toptal.com/javascript/10-most-common-javascript-mistakes#common-mistake-3-creating-memory-leaks" target="_blank">explain</a>!</p>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Hard to read
+        </u3>
+        <pre><code data-trim contenteditable>
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i&lt;d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+        </code></pre>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Hard to debug
+        </u3>
+      </section>
+      <section class="oscuro" data-background="#000">
+        <img src="/images/stop.jpg" style="height:600px;" />
+      </section>
+      <section>
+        <h2>Strengths of Javascript</h2>
+        <ul>
+          <li class="fragment">Community (the most used lang of the world!)</li>
+          <li class="fragment">Performance (the new ASM)</li>
+          <li class="fragment">Runs everywhere (Browser, iOS, Andrid, Arduino, x86...)</li>
+          <li class="fragment">Mirror coding... and isomorphic</li>
+          <li class="fragment">Hard to master... but easy to learn</li>
+          <li class="fragment">JSON Serialization</li>
+          <li class="fragment">Async callback oriented</li>
+          <li class="fragment">WebSockets frendly</li>
+          <li class="fragment">Encapsulated solution</li>
+          <li class="fragment">On the road load and compiling</li>
+          <li class="fragment">ES 2K15</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Strengths of Javascript</h2>
+        <h3>2 Key concepts</h3>
+        <ul>
+          <li class="fragment">Node.js (or io.js)</li>
+          <li class="fragment">ES 2K15</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <h2>Node.js</h2>
+      
     </section>
   </div>
 </template>
