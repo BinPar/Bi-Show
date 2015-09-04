@@ -132,6 +132,24 @@
       <section>
         <h2>Weaknesses of Javascript</h2>
         <u3>
+          Lack of proper method overload
+        </u3>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Lack of proper namespacing
+        </u3>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
+          Lack of proper inherence
+        </u3>
+      </section>
+      <section>
+        <h2>Weaknesses of Javascript</h2>
+        <u3>
           Confusion about equality
         </u3>
         <pre><code data-trim contenteditable>
@@ -221,7 +239,7 @@ setInterval(replaceThing, 1000);    // invoke `replaceThing' once every second
         <u3>
           Hard to read
         </u3>
-        <pre><code data-trim contenteditable>
+        <pre><code style="font-size:14px" data-trim contenteditable>
 function MM_findObj(n, d) { //v4.01
   var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
     d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
@@ -266,8 +284,127 @@ function MM_findObj(n, d) { //v4.01
       </section>
     </section>
     <section>
-      <h2>Node.js</h2>
-      
+      <section >
+          <h2>Ecmascript 2015</h2>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>Arrow Functions</p>
+          <pre><code data-trim contenteditable>
+this.message = 'hello world';
+var that = this;
+
+process.nextTick(function() {
+  console.log(that.message);
+});
+          </code></pre>
+          <pre><code data-trim contenteditable>
+process.nextTick(() => {
+  console.log(this.message);
+});
+          </code></pre>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>Binary and Octal Literals</p>
+          <pre><code data-trim contenteditable>
+0b111110111 === 503 // true
+0o767 === 503 // true
+          </code></pre>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>Block Scoping!!!!!!</p>
+          <pre><code data-trim contenteditable>
+for (var i = 0; i &lt; 3; i++) {
+   let j = i * i;
+   console.log(j);
+}
+console.log(j); // => error, j is undefined
+          </code></pre>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>Const</p>
+          <pre><code data-trim contenteditable>
+const PI = 3.14159265359;
+PI = 0; // => Error: PI" is read-only
+          </code></pre>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>Classes!!!!!</p>
+          <pre><code data-trim contenteditable>
+class Monster extends Entity {
+  constructor(name) {
+    super();
+    this.name = name;
+  }
+
+  get scariness() {
+    return 'mild';
+  }
+
+  speak() {
+    super.speak();
+  }
+
+  static create() {
+    return new Monster();
+  }
+}
+          </code></pre>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>Default Parameter Values</p>
+          <pre><code data-trim contenteditable>
+function f(x, y) {
+  y = y || 42;
+  return x + y;
+}
+          </code></pre>
+          <pre><code data-trim contenteditable>
+function f(x, y=42) {
+  return x + y;
+}
+          </code></pre>
+      </section>
+      <section>
+          <h2>Ecmascript 2015</h2>
+          <p>And a <a href="http://caspervonb.com/javascript/an-overview-of-javascript-in-2015-ecmascript-6/#destructuring-assignments" target="blank">lot more</a>...</p>
+      </section>
+    </section>
+    <section>
+      <section class="oscuro" data-background="#000">
+          <img src="/images/nodejs.png" style="height:600px" />
+      </section>
+      <section>
+        <h2>Node.js</h2>
+        <pre><code style="font-size:14px" data-trim contenteditable>
+var dirname = "meds"
+var fs = require('fs');
+var jsdom = require('node-jsdom');
+jsdom.env(
+	"",
+	[__dirname + '\\jquery-1.7.1.min.js'],
+	function (err, window) {
+		fs.readdir(dirname, function(err, files) {
+			files.forEach(function(f) {
+				window.document.write(fs.readFileSync(dirname + '\\' + f, "utf8"));
+				window.document.close();
+				var title = window.$("title").text();
+				fs.writeFile("out/" + f, window.$(".pad").html(), function(err) {
+					console.log(title + "... OK");
+				});
+			});
+		});
+	});
+        </code></pre>
+      </section>
+    </section>
+    <section >
+        <img src="/images/meteor.jpg" style="height:400px" />
     </section>
   </div>
 </template>
